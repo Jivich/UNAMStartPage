@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>My StartPage</title>
+	<link href="Img/icon/UNAM.ico" type="image/x-icon" rel="shortcut icon" />
+	<link rel="stylesheet" href="Style/normalize.css">
+	<link rel="stylesheet" href="Style/direction-reveal.css">
+	<link rel="stylesheet" href="Style/style.css">
+</head>
+
+<body>
+	<div class="box">
+		<div class="boxHead">
+			<p class="title"></p>
+		</div>
+		<div class="boxSearchCalendarCelebration">
+			<div class="contenedorBuscador">
+				<div class="divFormulario">
+					<form id="formulario" name="google" method="get" action="http://www.google.com/search">
+						<input id="searchInput" type="text" name="q" autofocus autocomplete="off" placeholder="Search">
+						<button id="searchInputSubmitSearch" type="submit" name="button"><i class="icon icon-search"></i></button>
+						<button id="searchInputSubmitReset" type="reset" name="button"><i class="icon icon-cancel"></i></button>
+					</form>
+				</div>
+				<div class="dropdown" id="dropdown">
+					<div class="searchElement">
+						<a id="youtubeSearch" href="">
+							<p id="titleYouTube">
+								<span>YouTube</span>
+							</p>
+							<p id="searchYouTube"></p>
+						</a>
+					</div>
+					<div class="searchElement">
+						<a id="duckduckgoSearch" href="">
+							<p id="titleDuckDuckGo">
+								<span>Duck Duck Go</span>
+							</p>
+							<p id="SearchDuckDuckGo"></p>
+						</a>
+					</div>
+					<div class="searchElement">
+						<a id="yandexSearch" href="">
+							<p id="titleYandex">
+								<span>Yandex</span>
+							</p>
+							<p id="SearchYandex"></p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--End contenedorBuscador-->
+			<div class="contenedorFechaHora">
+				<span id="date"></span>
+				<span id="time"></span>
+			</div>
+			<div class="contenedorCelebracion">
+				<span id="celebration"></span>
+			</div>
+		</div>
+		<!-- End boxSearchCalendarCelebration -->
+		<div class="container">
+	    <div class="direction-reveal direction-reveal--3-grid-flexbox direction-reveal--demo-swing">
+
+	      <div class="direction-reveal__card">
+	        <img src="" alt="Image" class="img-fluid" id="imgGridA">
+	        <div class="direction-reveal__overlay direction-reveal__anim--in">
+	          <h3 class="direction-reveal__title">Social</h3>
+	        </div>
+	      </div>
+
+	      <div class="direction-reveal__card">
+	        <img src="" alt="Image" class="img-fluid" id="imgGridB">
+	        <div class="direction-reveal__overlay direction-reveal__anim--in">
+	          <h3 class="direction-reveal__title">Work</h3>
+	        </div>
+	      </div>
+
+	      <div class="direction-reveal__card">
+	        <img src="" alt="Image" class="img-fluid" id="imgGridC">
+	        <div class="direction-reveal__overlay direction-reveal__anim--in">
+	          <h3 class="direction-reveal__title">Other</h3>
+	        </div>
+	      </div>
+
+	      <div class="direction-reveal__card">
+	        <img src="" alt="Image" class="img-fluid" id="imgGridD">
+	        <div class="direction-reveal__overlay direction-reveal__anim--in">
+	          <h3 class="direction-reveal__title">Other</h3>
+	        </div>
+	      </div>
+
+	      <div class="direction-reveal__card">
+	        <img src="" alt="Image" class="img-fluid" id="imgGridE">
+	        <div class="direction-reveal__overlay direction-reveal__anim--in">
+	          <h3 class="direction-reveal__title">Work</h3>
+	        </div>
+	      </div>
+
+	      <div class="direction-reveal__card">
+	        <img src="" alt="Image" class="img-fluid" id="imgGridF">
+	        <div class="direction-reveal__overlay direction-reveal__anim--in">
+	          <h3 class="direction-reveal__title">Other</h3>
+	        </div>
+	      </div>
+
+	    </div>
+	  </div>
+		<!--End container-->
+</div>
+<!--End box-->
+
+<!--Script-->
+<script type="text/javascript" src="calendar.json"></script>
+<script type="text/javascript" src="urls.json"></script>
+<script type="text/javascript" src="JS/script.js"></script>
+<script type="text/javascript" src="JS/bundle.js"></script>
+
+</body>
+
+</html>

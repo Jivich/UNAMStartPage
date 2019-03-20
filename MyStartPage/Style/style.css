@@ -1,0 +1,483 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Gruppo');
+@font-face {
+  font-family: 'Gruppo';
+  src: url('fonts/Gruppo.ttf');
+       font-weight: normal;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: "untitled-font-1";
+  src: url("fonts/untitled-font-1.eot");
+  src: url("fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("fonts/untitled-font-1.woff") format("woff"),
+    url("fonts/untitled-font-1.ttf") format("truetype"),
+    url("fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\61";
+}
+
+.icon-cancel:before {
+  content: "\63";
+}
+
+body{
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas:
+    "Head Head Head"
+    "SearchCalendar SearchCalendar SearchCalendar"
+    "Container Container Container";
+
+  grid-template-rows:
+      1fr 1fr 15fr;
+
+  grid-template-columns:
+      1fr 1fr 1fr;
+
+  grid-auto-flow: column dense;
+}
+
+.boxHead {
+  grid-area: Head;
+  /*background-color: black;*/
+  padding: 0px;
+  margin-top: -8px;
+}
+
+.title {
+  color: #fff;
+  text-shadow:0 0 10px rgba(0,178,255,1),
+  0 0 20px rgba(0,178,255,1),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1);
+  filter: saturate(60%);
+  font-family: Gruppo;
+  font-size: 3em;
+  padding: 0px;
+  margin: 0px;
+}
+
+.boxSearchCalendarCelebration {
+  grid-area: SearchCalendar;
+  /*background-color: #f06595;*/
+  display: grid;
+  margin-left: 0px;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+    "buscador fechaHora celebracion";
+
+  grid-template-rows:
+      1fr;
+
+  grid-template-columns:
+      1fr 1fr 1fr;
+}
+
+.contenedorBuscador{
+  grid-area: buscador;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: blue;*/
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.contenedorFechaHora {
+  grid-area: fechaHora;
+  color: #fff;
+  text-shadow:0 0 10px rgba(0,178,255,1),
+  0 0 20px rgba(0,178,255,1),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1);
+  filter: saturate(60%);
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  /*background-color: green;*/
+  font-family: Gruppo;
+  font-size: 1.5em;
+  /*text-align: center;*/
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas:
+    "date time";
+
+  grid-template-rows:
+      1fr;
+
+  grid-template-columns:
+      13fr 5fr;
+}
+
+#date{
+  grid-area: date;
+  /* background-color: red; */
+}
+
+#time{
+  grid-area: time;
+  /* background-color: blue; */
+}
+
+.contenedorCelebracion {
+  grid-area: celebracion;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+#celebration {
+  color: #fff;
+  text-shadow:0 0 10px rgba(0,178,255,1),
+  0 0 20px rgba(0,178,255,1),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1);
+  filter: saturate(60%);
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  /*background-color: violet;*/
+  font-family: Gruppo;
+  font-size: 1.5em;
+}
+
+.divFormulario{
+  width: 100%;
+  height: auto;
+}
+
+#formulario {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+#searchInput{
+  width: 70%;
+  border: 0px;
+  outline: none;
+  color: #fff;
+  text-shadow:0 0 10px rgba(0,178,255,1),
+  0 0 20px rgba(0,178,255,1),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1);
+  filter: saturate(60%);
+  background-color: transparent;
+  font-family: Gruppo;
+  font-size: 1.5em;
+  padding: 0px;
+  margin: 0px;
+}
+
+#searchInputSubmitSearch {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  font-size: 20px;
+  color: #007bff;
+  border-style: solid;
+  border-color: #007bff;
+  text-align: center;
+  margin: 0px;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+#searchInputSubmitSearch:hover {
+  color: white;
+  background-color: #007bff;
+}
+
+#searchInputSubmitReset {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  font-size: 20px;
+  color: #dc3545;
+  border-style: solid;
+  border-color: #dc3545;
+  text-align: center;
+  margin: 0px;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+#searchInputSubmitReset:hover {
+  color: white;
+  background-color: #dc3545;
+}
+
+.dropdown {
+  /*background: rgba(0, 0, 0, 0.5);*/
+  background: transparent;
+  visibility: hidden;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 8px;
+  top: 100px;
+  z-index: 1;
+}
+
+.dropdown a {
+  text-decoration: none;
+}
+
+.searchElement {
+  width: auto;
+  height: auto;
+  margin: 0px 0px 0px 0px;
+  padding: 5px 0px 5px 0px;
+}
+
+.searchElement:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+}
+
+#titleYouTube {
+  height: auto;
+  width: 80px;
+  text-align: center;
+  color: white;
+  font-family: Gruppo;
+  font-size: 18px;
+  background-color: #ff0000e6;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+#searchYouTube {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: Gruppo;
+  font-size: 18px;
+}
+
+#titleDuckDuckGo {
+  height: auto;
+  width: 130px;
+  text-align: center;
+  color: white;
+  font-family: Gruppo;
+  font-size: 18px;
+  background-color: #de5833;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+#SearchDuckDuckGo {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: Gruppo;
+  font-size: 18px;
+}
+
+#titleYandex {
+  height: auto;
+  width: 80px;
+  text-align: center;
+  color: white;
+  font-family: Gruppo;
+  font-size: 18px;
+  background-color: #ed1f24;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+#SearchYandex {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: Gruppo;
+  font-size: 18px;
+}
+
+.container {
+  grid-area: Container;
+  /*background-color: goldenrod;*/
+  width: 100%;
+  max-width: 680px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Gruppo;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.tabla{
+  width: 80%;
+  height: auto;
+  display: inline-block;
+}
+
+.tabla tr{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tabla td{
+  width: 20%;
+  margin: 0px;
+  padding: 0px;
+  }
+
+.tabla a{
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 15px;
+}
+
+.tabla img{
+  width: 100%;
+    border-radius: 15px;
+}
+
+.tabla img:hover {
+    opacity: 0.7;
+}
+
+/* (1366x768) WXGA Display o menos*/
+@media screen and (max-width: 1366px) {
+  .container {
+    width: 100%;
+    max-width: 680px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+  }
+}
+
+/* (1440x900) WXGA+ Display */
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+  }
+}
+
+/* (1680x1050) WSXGA+ Display */
+@media screen and (min-width: 1680px) {
+  .container {
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+  }
+}
+
+/* (1920x1080) Full HD Display */
+@media  screen and (min-width: 1920px) {
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+  }
+}
+
+/* (3080x2160) 4K Ultra HD */
+@media  screen and (min-width: 3080px) {
+  .container {
+    width: 100%;
+    max-width: 2300px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+  }
+
+  .dropdown {
+  left: 8px;
+  top: 210px;
+  }
+
+}
