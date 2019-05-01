@@ -126,8 +126,7 @@ var myObj = {
     {"day":27, "celebration":[""]},
     {"day":28, "celebration":[""]},
     {"day":29, "celebration":[""]},
-    {"day":30, "celebration":[""]},
-    {"day":31, "celebration":["Children's Day"]}
+    {"day":30, "celebration":["Children's Day"]}
   ],
   "May":[
     {"day":1, "celebration":["Labor Day"]},
