@@ -166,11 +166,9 @@ StartPage.prototype.consolaInformacion = function(){
     var egg = console.log("There are no easter eggs here.");
     var rabbit = console.log("    (\\_/)");
     var rabbit = console.log("   =('_')=");
-    var version = console.log("Version: 3.0.1");
-    var author = console.log("Author: vill1960");
-    var email = console.log("GitHub: https://github.com/vill1960/");
+    var gitHub = console.log("GitHub: https://github.com/vill1960/");
 
-    return (egg, rabbit, version, author, email);
+    return (egg, rabbit, gitHub);
 }
 
 /*---------------------------------------------------------------------------*/
